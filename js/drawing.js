@@ -4,7 +4,7 @@ let lastPos = mousePos;
 function initCanvas(canvas) {
     const ctx = canvas.getContext("2d");
     // 펜 사이즈 및 색
-    ctx.strokeStyle = '#f00';
+    ctx.strokeStyle = '#333';
     ctx.lineWidth = 2;
     // 드로잉 마우스 이벤트 적용
     canvas.addEventListener("mousedown", function (e) {
