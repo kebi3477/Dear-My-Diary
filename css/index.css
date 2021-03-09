@@ -1,0 +1,15 @@
+.first {
+    background-image: url('../images/background/d_first.png');
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.start {
+    background-color: transparent;
+    width: 15rem;
+    height: 4.5rem;
+    top: 29.5%;
+    position: relative;
+    border: none;
+}
