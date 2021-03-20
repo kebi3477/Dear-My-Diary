@@ -8,6 +8,16 @@
         visibility: visible;
     }
 }
+@keyframes fadeOut {
+    50% {
+        visibility: visible;
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
 * {
     margin: 0;
     padding: 0;
