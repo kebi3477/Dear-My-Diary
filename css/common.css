@@ -26,13 +26,13 @@ body {
     overflow: hidden;
     user-select: none;
 }
-
 .background {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
     position: relative;
 }
+/* 팝업 */
 .popup {
     width: 100%;
     height: 100vh;
@@ -49,4 +49,20 @@ body {
 }
 .popup-active {
     animation: 1s fadeIn forwards;
+}
+/* 오른쪽 하단 버튼 */
+.after_button {
+    position: absolute;
+    z-index: 1;
+    right: 1.5rem;
+    bottom: 1.5rem;
+    width: 8%;
+    visibility: hidden;
+    opacity: 0;
+}
+.after_button_active {
+    animation: fadeIn 2s forwards;
+}
+.after_button > img {
+    width: 100%;
 }

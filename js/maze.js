@@ -1,28 +1,22 @@
 const canvas = document.querySelector(".maze--canvas");
+const checkBoxs = document.querySelectorAll(".check_box");
+const afterButton = document.querySelector(".after_button");
+let items = [false, false];
 
-const items = {
-    item1: false,
-    item2: false
-}
 initCanvas(canvas);
 canvas.addEventListener("touchstart", function(e) {
-    isCheck(265, 190, 370, 230, mousePos) ? items.item1 = true : "";
+    checkByDom(checkBoxs[0]) ? items[0] = true : "";    
 })
 canvas.addEventListener("touchend", function(e) {
-    isCheck(1000, 500, 1055, 550, mousePos) ? items.item2 = true : "";
-    if(items.item1 && items.item2) {
-        alert("미로 성공!");
+    checkByDom(checkBoxs[1]) ? items[1] = true : "";    
+    console.log(checkBoxs[1].offsetLeft, checkBoxs[1].offsetTop, mousePos);
+    console.log(checkBoxs[1].offsetLeft+checkBoxs[1].offsetWidth, checkBoxs[1].offsetTop+checkBoxs[1].offsetHeight, mousePos);
+    console.log(items);
+    if(items[0] && items[1]) {
+        // alert("미로 성공!");
+        afterButton.classList.add("after_button_active");
+        afterButton.onclick = () => location.href = 'mart.html';
     } else {
-        items.item1 = false;
-        items.item2 = false;
+        items = [false, false];
     }
 })
-canvas.addEventListener("touchmove", function(e) {
-    console.log(mousePos, items);
-})
-
-function isCheck(xStart, yStart, xEnd, yEnd, mousePos) {
-    if(mousePos.x > xStart && mousePos.y > yStart && mousePos.x < xEnd && mousePos.y < yEnd) {
-        return true;
-    }
-}
