@@ -1,9 +1,46 @@
+.popup {
+    opacity: 1;
+    animation: fadeOut 2s forwards;
+}
+.popup > img {
+    width: 70%;
+}
+.popup_second {
+    animation-delay: 1.5s;
+}
+.check_boxs {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+}
+.check_box {
+    width: 8rem;
+    height: 8rem;
+    background-color: #3333;
+    position: absolute;
+}
+.check_box:nth-of-type(1) {
+    left: 4rem;
+    top: 5.5rem;
+}
+.check_box:nth-of-type(2) {
+    left: 37rem;
+    top: 15rem;
+}
+.check_box:nth-of-type(3) {
+    left: 22rem;
+    top: 15rem;
+}
+.check_box:nth-of-type(4) {
+    left: 28rem;
+    top: 23rem;
+}
 .mart {
     width: 100%;
     height: 100vh;
-    background-image: url('../images/mart.png');
+    background-image: url('../images/background/12_base.png');
 }
 .mart--canvas {
     position: absolute;
-    top: 11.7%;
 }

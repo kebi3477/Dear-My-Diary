@@ -11,7 +11,7 @@
 }
 .diary {
     height: 100vh;
-    background-image: url('../images/background/9_base.png  ');
+    background-image: url('../images/background/9_base.png');
     width: 100%;
     display: flex;
     align-items: center;
@@ -42,5 +42,4 @@
 }
 .next > img {
     width: 100%;
-    box-shadow: 1px 1px 2px 0px #828282;
 }
