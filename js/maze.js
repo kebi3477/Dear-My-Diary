@@ -1,6 +1,9 @@
 const canvas = document.querySelector(".maze--canvas");
 const checkBoxs = document.querySelectorAll(".check_box");
 const afterButton = document.querySelector(".after_button");
+const popupSecond = document.querySelector(".popup_second")
+const checklist = document.querySelector(".checklist");
+
 let items = [false, false];
 
 initCanvas(canvas);
@@ -19,4 +22,10 @@ canvas.addEventListener("touchend", function(e) {
     } else {
         items = [false, false];
     }
+})
+checklist.addEventListener("click", function() {
+    popupSecond.style.animation = 'fadeIn 2s forwards';
+    setTimeout(() => {
+        popupSecond.style.animation = 'fadeOut 2s forwards';
+    }, 2000)
 })

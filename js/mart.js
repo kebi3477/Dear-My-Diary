@@ -3,6 +3,8 @@ initCanvas(canvas)
 const items = [false, false, false, false];
 const checkBoxs = document.querySelectorAll(".check_box");
 const button = document.querySelector(".after_button");
+const popupSecond = document.querySelector(".popup_second");
+const checklist = document.querySelector(".checklist");
 
 canvas.addEventListener("touchmove", function(e) {
     checkBoxs.forEach((box, index) => {
@@ -15,4 +17,10 @@ canvas.addEventListener("touchend", function() {
         button.classList.add("after_button_active");
         button.onclick = () => location.href = 'pay.html';
     }
+})
+checklist.addEventListener("click", function() {
+    popupSecond.style.animation = 'fadeIn 2s forwards';
+    setTimeout(() => {
+        popupSecond.style.animation = 'fadeOut 2s forwards';
+    }, 2000)
 })
