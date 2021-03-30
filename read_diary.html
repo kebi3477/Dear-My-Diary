@@ -20,15 +20,6 @@
     <div class="next">
         <img src="images/button/9_bottom.png" alt="next">
     </div>
-    <script>
-        const next = document.querySelector(".next");
-        const text = document.querySelector(".text");
-        const nickName = localStorage.getItem("nickName");
-
-        next.onclick = () => {
-            location.href = "home.html";
-        }
-        text.innerHTML = `${nickName}님이 작성하신<br>일기를 읽어주세요!!`;
-    </script>
+    <script src="js/readDiary.js"></script>
 </body>
 </html>

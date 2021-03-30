@@ -5,6 +5,8 @@ const checkBoxs = document.querySelectorAll(".check_box");
 const button = document.querySelector(".after_button");
 const popupSecond = document.querySelector(".popup_second");
 const checklist = document.querySelector(".checklist");
+const nowTime = new Date().getTime();
+const timeOut = localStorage.getItem("timeout");
 
 canvas.addEventListener("touchmove", function(e) {
     checkBoxs.forEach((box, index) => {
@@ -15,7 +17,13 @@ canvas.addEventListener("touchend", function() {
     if(items.filter(data => data).length === items.length) {
         //alert("장보기 완료");
         button.classList.add("after_button_active");
-        button.onclick = () => location.href = 'pay.html';
+        button.onclick = () => {
+            const newTime = new Date().getTime();
+            const diffSeconds = (newTime - nowTime) / (1000);
+
+            localStorage.setItem("timeout", parseInt(timeOut)+diffSeconds);
+            location.href = 'pay.html';
+        }
     }
 })
 checklist.addEventListener("click", function() {
